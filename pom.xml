@@ -14,16 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
-         
-         <distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <url>http://192.168.55.10:8081/repository/maven-releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexus</id>
-      <url>http://192.168.55.10:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
+
   </distributionManagement>
 
   <dependencies>
@@ -101,28 +92,7 @@
         </executions>
       </plugin>
        
-             
- <plugin>
-   <groupId>org.sonatype.plugins</groupId>
-   <artifactId>nexus-staging-maven-plugin</artifactId>
-   <version>1.5.1</version>
-   <executions>
-      <execution>
-         <id>default-deploy</id>
-         <phase>deploy</phase>
-         <goals>
-            <goal>deploy</goal>
-         </goals>
-      </execution>
-   </executions>
-   <configuration>
-      <serverId>nexus</serverId>
-      <nexusUrl>http://192.168.55.10:8081/repository/maven-central/</nexusUrl>
-      <skipStaging>true</skipStaging>
-   </configuration>
-</plugin>
-             
-                
+                       
     </plugins>
   </build>
 

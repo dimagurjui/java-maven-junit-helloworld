@@ -104,7 +104,13 @@
                      </executions>
                      <configuration>
                         <serverId>nexus</serverId>
-                        <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+                        <nexusUrl><servers>
+   <server>
+      <id>nexus-snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+   </server>
+</servers></nexusUrl>
                         <skipStaging>true</skipStaging>
                      </configuration>
                   </plugin>
@@ -121,6 +127,6 @@
         <version>2.6</version>
       </plugin>
     </plugins>
-  </reporting>
+  </reporting>       
 
 </project>
